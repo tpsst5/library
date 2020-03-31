@@ -21,22 +21,10 @@
         </tr>
       </thead>
       <tbody id="tableBody">
-        <!-- <tr>
-          <td>The Two Towers</td>
-          <td>J.R.R. Tolkien</td>
-          <td>359 pages</td>
-          <td>Yes</td>
-        </tr>
-        <tr>
-          <td>Guns, Germs, and Steel</td>
-          <td>John Doe</td>
-          <td>520 pages</td>
-          <td>No</td>
-        </tr> -->
       </tbody>
     </table>
     <div id="container2">
-      <div id="inputs">
+      <form id="inputs">
         <div id="title">
           <label for="title">Title</label><br>
           <input type="text" id="titleInput" name="title" required>
@@ -55,11 +43,11 @@
             <input type="radio" name="read" id="notRead" value="No" required>Not Read
           </label>
         </div>
-        <div id="buttons">
-          <button type="button" id="addBook">Add Book</button>
-          <button type="reset" id="reset">Reset</button>
+        <div>
+          <button type="submit" class="buttons" id="addBook">Add Book</button>
+          <button type="reset" class="buttons" id="reset">Reset</button>
         </div>
-      </div>
+      </form>
     </div>
 
   </main>

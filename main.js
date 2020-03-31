@@ -28,11 +28,14 @@ let wasRead = document.getElementById('wasRead');
 let notRead = document.getElementById('notRead');
 
 let newBookFunc = () => {
+  if(!title.value || !author.value || !pages.value || (wasRead.checked === false && notRead.checked === false)) return;
   let readOrNot = wasRead.checked ? wasRead.value : notRead.value;
   let newBook = new Book(title.value, author.value, pages.value, readOrNot);
   title.value = '';
   author.value = '';
   pages.value = '';
+  wasRead.checked = false;
+  notRead.checked = false;
   addBookToLibrary(newBook);
 };
 
@@ -55,3 +58,8 @@ let render = ((inputArr) => {
   row.insertCell(2).innerHTML = inputArr[0].pages;
   row.insertCell(3).innerHTML = inputArr[0].read;
 });
+
+let clearTable = () => document.getElementById('tableBody').innerHTML = '';
+
+// Event listener for 'Reset' button
+document.getElementById('reset').addEventListener('click', clearTable);
