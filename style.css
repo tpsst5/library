@@ -9,15 +9,27 @@ html {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-h1 {
-  color: #444;
+#headerBox {
+  margin: auto;
+  padding: 1.2rem;
+  width: 70%;
   background-color: #eee;
+  border: 1px solid black;
+  opacity: 0.9;
+  border-radius: 5px;
+}
+
+#header {
+  color: #000;
   margin: auto;
   font-size: 4.5rem;
   font-weight: 550;
   line-height: 1.2;
   width: 40%;
   border-radius: 5px;
+  font-size: 300%;
+  place-self: center;
+  font-weight: bold;
 }
 
 .text-center {
@@ -28,22 +40,18 @@ h1 {
   margin: 20px;
 }
 
-#headers {
-  font-size: 300%;
-  place-self: center;
-  border: solid black;
-}
-
 #data {
   margin: auto;
   background-color: #eee;
   border-radius: 5px;
+  border: 1px solid black;
+  opacity: 0.9;
 }
 
 th {
-  font-size: 300%;
+  font-size: 250%;
   padding: 10px 30px;
-  color: #444;
+  color: #000;
   border-bottom: #444 solid 2px;
 }
 
@@ -58,12 +66,19 @@ td {
   margin: auto;
   margin-top: 20px;
   background-color: #eee;
-  width: 165px;
+  width: 175px;
   border-radius: 5px;
+  border: 1px solid black;
+  opacity: 0.9;
+}
+
+#container2:hover {
+  opacity: 1;
 }
 
 #inputs {
-  padding: 10px;
+  padding: 2rem;
+  /* margin: auto; */
 }
 
 #title {
@@ -75,21 +90,51 @@ td {
 }
 
 #pages {
-  margin-bottom: 5px;
+  margin-bottom: 1.5rem;
 }
 
 #read {
-  margin-bottom: 10px;
+  margin: 0.5rem;
+  padding: 0.1rem;
 }
 
 label {
   font-size: 140%;
 }
 
-.buttons {
-  font-size: 150%;
-}
-
 #addBook {
   margin-right: 4px;
+}
+
+#readBtn {
+  font-size: 100%;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
+
+#delBtn {
+  font-size: 100%;
+  width: 100%;
+  padding: 0.2rem;
+  background: #eb0b0b;
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+  /* overflow: hidden; */
+  /* margin: 1.5rem 0.2rem 0.2rem 0.2rem; */
+}
+
+#buttons {
+  font-size: 150%;
+  width: 100%;
+  padding: 0.75rem;
+  background: #559beb;
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 1.5rem 0.2rem 0.2rem 0.2rem;
 }
