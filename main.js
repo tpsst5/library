@@ -45,7 +45,7 @@ function addBookToLibrary(book) {
 }
 
 // Change read status
-let changeRead = (e) => { 
+const changeRead = (e) => { 
   e.target.innerText = e.target.innerText === 'Yes' ? 'No' : 'Yes';
   const targetBook = e.path[2].cells[0].innerHTML;
   myLibrary.filter(index => {
@@ -56,7 +56,7 @@ let changeRead = (e) => {
 } 
 
 // Remove row from table
-let clearRow = (e) => {
+const clearRow = (e) => {
   e.path[2].remove();
   const targetBook = e.path[2].cells[0].innerHTML;
   let bookIndex = myLibrary.findIndex(x => x.book === targetBook);
@@ -64,12 +64,12 @@ let clearRow = (e) => {
 }
 
 // Inserts book input data to new row
-let render = ((inputArr) => {
-  let delBtn = document.createElement('BUTTON');
+const render = ((inputArr) => {
+  const delBtn = document.createElement('BUTTON');
   delBtn.innerHTML = 'DEL';
   delBtn.id = 'delBtn';
 
-  let readBtn = document.createElement('BUTTON');
+  const readBtn = document.createElement('BUTTON');
   readBtn.innerHTML = inputArr[0].read;
   readBtn.id = 'readBtn';
 
@@ -88,7 +88,7 @@ let render = ((inputArr) => {
 });
 
 // Clears entire table and myLibrary array
-let clearTable = () => {
+const clearTable = () => {
   document.getElementById('tableBody').innerHTML = ''; 
   myLibrary = [];
 }
