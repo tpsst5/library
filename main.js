@@ -41,10 +41,21 @@ function addBookToLibrary(book) {
 // Change read status
 let changeRead = (e) => { 
   e.target.innerText = e.target.innerText === 'Yes' ? 'No' : 'Yes';
+  const targetBook = e.path[2].cells[0].innerHTML;
+  myLibrary.filter(index => {
+    if (index.book === targetBook) {
+      index.read = index.read === 'Yes' ? 'No' : 'Yes';
+    } 
+  });
 } 
 
 // Remove row from table
-let clearRow = (e) => e.path[2].remove();
+let clearRow = (e) => {
+  e.path[2].remove();
+  const targetBook = e.path[2].cells[0].innerHTML;
+  let bookIndex = myLibrary.findIndex(x => x.book === targetBook);
+  myLibrary.splice(bookIndex, 1);
+}
 
 // Inserts book input data to new row
 let render = ((inputArr) => {
