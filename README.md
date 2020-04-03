@@ -11,6 +11,6 @@ This project was complete following The Odin Project's [curriculum](https://www.
 - Vanilla Javascript
 
 ## Setup: 
-The live version of the webpage can be seen [here](https://tpsst5.github.io/pomodoro_timer/).
+The live version of the webpage can be seen [here](https://tpsst5.github.io/library/).
 ## Status:
-This project is complete.
+I may add local storage capability.
