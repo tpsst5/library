@@ -8,10 +8,6 @@ function Book(book, author, pages, read, index) {
   this.index = index
 }
 
-// Variables for input information
-
-
-
 const newBookFunc = () => {
   const title = document.getElementById('titleInput');
   const author = document.getElementById('authorInput');
@@ -27,13 +23,14 @@ const newBookFunc = () => {
 
   const readOrNot = wasRead.checked ? wasRead.value : notRead.value;
   const newBook = new Book(title.value, author.value, pages.value, readOrNot);
-  
+  addBookToLibrary(newBook);
+
+  // Reset form inputs 
   title.value = '';
   author.value = '';
   pages.value = '';
   wasRead.checked = false;
   notRead.checked = false;
-  addBookToLibrary(newBook);
 };
 
 // Event listener for 'Add Book' button
@@ -87,8 +84,11 @@ let render = ((inputArr) => {
   document.getElementById('delBtn').addEventListener('click', clearRow);
 });
 
-// Clears entire table
-let clearTable = () => document.getElementById('tableBody').innerHTML = '';
+// Clears entire table and myLibrary array
+let clearTable = () => {
+  document.getElementById('tableBody').innerHTML = ''; 
+  myLibrary = [];
+}
 
 // Event listener for 'Reset' button
 document.getElementById('reset').addEventListener('click', clearTable);
