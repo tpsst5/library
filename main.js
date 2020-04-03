@@ -9,19 +9,25 @@ function Book(book, author, pages, read, index) {
 }
 
 // Variables for input information
-let title = document.getElementById('titleInput');
-let author = document.getElementById('authorInput');
-let pages = document.getElementById('pagesInput');
-let wasRead = document.getElementById('wasRead');
-let notRead = document.getElementById('notRead');
 
-let bookIndex = 0;
 
-let newBookFunc = () => {
-  if(!title.value || !author.value || !pages.value || (wasRead.checked === false && notRead.checked === false)) return;
-  let readOrNot = wasRead.checked ? wasRead.value : notRead.value;
-  let newBook = new Book(title.value, author.value, pages.value, readOrNot, bookIndex);
-  bookIndex++;
+
+const newBookFunc = () => {
+  const title = document.getElementById('titleInput');
+  const author = document.getElementById('authorInput');
+  const pages = document.getElementById('pagesInput');
+  const wasRead = document.getElementById('wasRead');
+  const notRead = document.getElementById('notRead');
+
+  if(!title.value || 
+    !author.value || 
+    !pages.value || 
+    (wasRead.checked === false && 
+    notRead.checked === false)) return;
+
+  const readOrNot = wasRead.checked ? wasRead.value : notRead.value;
+  const newBook = new Book(title.value, author.value, pages.value, readOrNot);
+  
   title.value = '';
   author.value = '';
   pages.value = '';
