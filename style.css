@@ -10,11 +10,11 @@ html {
 }
 
 #headerBox {
-  margin: auto;
-  padding: 1.2rem;
-  width: 70%;
+  margin: -1rem 0 9rem -1rem;
+  padding: 1.3rem;
+  width: 100%;
   background-color: #eee;
-  border: 1px solid black;
+  border-bottom: 5px solid black;
   opacity: 0.9;
   border-radius: 5px;
 }
@@ -22,18 +22,11 @@ html {
 #header {
   color: #000;
   margin: auto;
-  font-size: 4.5rem;
-  font-weight: 550;
   line-height: 1.2;
-  width: 40%;
-  border-radius: 5px;
-  font-size: 300%;
+  width: 90%;
+  text-align: left;
+  font-size: 5rem;
   place-self: center;
-  font-weight: bold;
-}
-
-.text-center {
-  text-align: center;
 }
 
 #container {
@@ -44,7 +37,7 @@ html {
   margin: auto;
   background-color: #eee;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 2px solid black;
   opacity: 0.9;
 }
 
@@ -68,7 +61,7 @@ td {
   background-color: #eee;
   width: 175px;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 2px solid black;
   opacity: 0.9;
 }
 
@@ -120,12 +113,10 @@ label {
   font-size: 100%;
   width: 100%;
   padding: 0.2rem;
-  background: #eb0b0b;
+  background: #c93c3c;
   color: inherit;
   border-radius: 2px;
   cursor: pointer;
-  /* overflow: hidden; */
-  /* margin: 1.5rem 0.2rem 0.2rem 0.2rem; */
 }
 
 .buttons {

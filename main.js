@@ -25,6 +25,9 @@ const newBookFunc = () => {
   const newBook = new Book(title.value, author.value, pages.value, readOrNot);
   addBookToLibrary(newBook);
 
+  // Reset required alerts
+  // window.alert = '';
+
   // Reset form inputs 
   title.value = '';
   author.value = '';
@@ -75,7 +78,7 @@ let render = ((inputArr) => {
   row = table.insertRow(0)
   row.insertCell(0).innerHTML = inputArr[0].book;
   row.insertCell(1).innerHTML = inputArr[0].author;
-  row.insertCell(2).innerHTML = inputArr[0].pages;
+  row.insertCell(2).innerHTML = inputArr[0].pages + ' pages';
 
   row.insertCell(3).append(readBtn);
   document.getElementById('readBtn').addEventListener('click', changeRead);
