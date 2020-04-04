@@ -4,7 +4,7 @@
 This project was complete following The Odin Project's [curriculum](https://www.theodinproject.com/courses/javascript/lessons/library). The purpose was to create an online library where you can keep track of books you've read or want to read.
 
 ## Screenshot:
-![My library screenshot](mylibrary.png)
+![My library screenshot](images/mylibrary.png)
 ## Technologies:
 - HTML
 - CSS
