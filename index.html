@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Library</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Library</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div id="headerBox">
+  <div id="header-container">
     <header id='header'>My Library</header>
   </div>
-  <main id="container">
-    <table id="data">
+  <main id="main-container">
+    <table id="table-data">
       <thead>
         <tr>
           <th>Title</th>
@@ -22,38 +23,41 @@
           <th>Read</th>
         </tr>
       </thead>
-      <tbody id="tableBody">
+      <tbody id="table-body">
       </tbody>
     </table>
-    <div id="container2">
-      <form id="inputs">
-        <div id="title">
+    <div id="input-container">
+      <form id="form">
+        <div id="title" class="text-inputs">
           <label for="title">Title</label><br>
-          <input type="text" id="titleInput" name="title" required>
+          <input class="input-text-area" type="text" id="title-input" name="title" required>
         </div>
-        <div id="author">
+        <div id="author" class="text-inputs">
           <label for="author">Author</label><br>
-          <input type="text" id="authorInput" name="author" required>
+          <input class="input-text-area" type="text" id="author-input" name="author" required>
         </div>
-        <div id="pages">
+        <div id="pages" class="text-inputs">
           <label for="pages">Pages</label><br>
-          <input type="number" id="pagesInput" name="pages" required>
+          <input class="input-text-area" type="number" id="pages-input" name="pages" required>
         </div>
-        <div id="read">
+        <div id="check-read">
           <label for="read">
-            <input type="radio" name="read" id="wasRead" value="Yes" required>Read
-            <input type="radio" name="read" id="notRead" value="No" required>Unread
+            <input type="radio" name="read" id="read" value="Yes" required>
+            <label for="read" id="read-label">Read</label>
+            <input type="radio" name="read" id="not-read" value="No">
+            <label for="unread" id="unread-label">Unread</label>
           </label>
         </div>
-        <div>
-          <button type="submit" class="buttons" id="addBook">Add Book</button>
-          <button type="reset" class="buttons" id="reset">Reset</button>
+        <div class="btn-container">
+          <button type="submit" class="btn" id="add-book">Add Book</button>
+          <button type="reset" class="btn" id="reset">Reset</button>
         </div>
       </form>
     </div>
 
   </main>
-     
-    <script src="main.js"></script>
+
+  <script src="main.js"></script>
 </body>
+
 </html>

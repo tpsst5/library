@@ -1,6 +1,12 @@
-html { 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
   font-size: 10px;
-  background: url('images/library.jpg') no-repeat center center fixed; 
+  background: url('images/library.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -9,107 +15,68 @@ html {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#headerBox {
-  margin: -1rem 0 9rem -1rem;
+/* Header styles */
+#header-container {
   padding: 1.3rem;
-  width: 100%;
+  width: 100vw;
   background-color: #eee;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid #222;
   opacity: 0.9;
   border-radius: 5px;
 }
 
 #header {
-  color: #000;
+  color: #222;
   margin: auto;
   line-height: 1.2;
-  width: 90%;
+  width: 100vw;
   text-align: left;
   font-size: 5rem;
-  place-self: center;
 }
 
-#container {
-  margin: 20px;
+/* Contains the books data and input */
+#main-container {
+  margin-top: 7rem;
+  display: grid;
 }
 
-#data {
+/* Book data/info styles */
+#table-data {
   margin: auto;
   background-color: #eee;
   border-radius: 5px;
-  border: 2px solid black;
+  border: 2px solid #222;
   opacity: 0.9;
 }
 
 th {
-  font-size: 250%;
+  font-size: 3rem;
   padding: 10px 30px;
-  color: #000;
+  color: #222;
   border-bottom: #444 solid 2px;
 }
 
 td {
   color: #444;
-  font-size: 185%;
+  font-size: 1.5rem;
   padding: 5px 10px;
   text-align: center;
 }
 
-#container2 {
-  margin: auto;
-  margin-top: 20px;
-  background-color: #eee;
-  width: 175px;
-  border-radius: 5px;
-  border: 2px solid black;
-  opacity: 0.9;
-}
-
-#container2:hover {
-  opacity: 1;
-}
-
-#inputs {
-  padding: 2rem;
-  /* margin: auto; */
-}
-
-#title {
-  margin-bottom: 5px;
-}
-
-#author {
-  margin-bottom: 5px;
-}
-
-#pages {
-  margin-bottom: 1.5rem;
-}
-
-#read {
-  margin: 0.5rem;
-  padding: 0.1rem;
-}
-
-label {
-  font-size: 140%;
-}
-
-#addBook {
-  margin-right: 4px;
-}
-
-#readBtn {
-  font-size: 100%;
+#read-btn {
+  width: 40px;
+  height: 30px;
+  font-size: inherit;
+  color: inherit;
   background-color: Transparent;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   border: none;
-  cursor:pointer;
+  cursor: pointer;
   overflow: hidden;
-  outline:none;
+  outline: none;
 }
 
-#delBtn {
+#delete-btn {
   font-size: 100%;
   width: 100%;
   padding: 0.2rem;
@@ -117,15 +84,86 @@ label {
   color: inherit;
   border-radius: 2px;
   cursor: pointer;
+  transition: all 0.8s;
 }
 
-.buttons {
-  font-size: 150%;
-  width: 100%;
-  padding: 0.75rem;
+#delete-btn:hover {
+  background: #a02e2e;
+}
+
+/* Book input styles */
+#input-container {
+  margin: 3rem auto;
+  display: grid;
+  background: #eee;
+  width: 250px;
+  border-radius: 5px;
+  border: 2px solid #222;
+  opacity: 0.9;
+}
+
+#input-container:hover {
+  opacity: 1;
+}
+
+#form {
+  margin: auto;
+  display: grid;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.text-inputs {
+  margin-top: 1.4rem;
+}
+
+.input-text-area {
+  padding: 0.6rem;
+  margin-top: 4px;
+  width: 190px;
+}
+
+#pages-input {
+  margin-bottom: 2rem;
+}
+
+#check-read {
+  display: grid;
+  margin-bottom: 2rem;
+}
+
+#read-label {
+  margin-right: 2rem;
+}
+
+.btn-container {
+  display: grid;
+}
+
+.btn {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding: 0.6rem;
+  border-radius: 5px;
   background: #559beb;
-  color: inherit;
-  border-radius: 2px;
   cursor: pointer;
-  margin: 1.5rem 0.2rem 0.2rem 0.2rem;
+  transition: all 0.8s;
+}
+
+.btn:hover {
+  background: #316fb6;
+}
+
+/* Media Query */
+@media all and (max-width: 600px) {
+
+  #header {
+    font-size: 4rem;
+    line-height: 1;
+  }
+
+  th {
+    font-size: 2rem;
+    padding: 10px 10px;
+  }
 }
