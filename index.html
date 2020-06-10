@@ -10,10 +10,41 @@
 </head>
 
 <body>
+  <!-- Header -->
   <div id="header-container">
-    <header id='header'>My Library</header>
+    <header id='header-title'>MyLIBRARY</header>
+    <div class="sign-in-container">
+      <div class="header-btns">
+        <div class="login-dropdown">
+          <button id="login" class="log-in-btns">LOGIN</button>
+          <!-- Login Drop Form -->
+          <div class="login-form-container">
+            <form class="login-form">
+              <input type="text" name="user" placeholder="Username" required>
+              <input type="password" name="password" placeholder="Password">
+              <button class="login-submit-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+        <p class="lead">or</p>
+        <div class="sign-up-dropdown">
+          <button id="sign-up" class="log-in-btns">SIGN UP</button>
+          <!-- Login Drop Form -->
+          <div class="sign-up-form-container">
+            <form class="login-form">
+              <input type="text" name="user" placeholder="Username" required>
+              <input type="password" name="password" placeholder="Password">
+              <button class="login-submit-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- Main Container -->
   <main id="main-container">
+    <!-- Main Book List Data -->
     <table id="table-data">
       <thead>
         <tr>
@@ -26,6 +57,8 @@
       <tbody id="table-body">
       </tbody>
     </table>
+
+    <!-- Input New Book or Reset -->
     <div id="input-container">
       <form id="form">
         <div id="title" class="text-inputs">
@@ -49,8 +82,8 @@
           </label>
         </div>
         <div class="btn-container">
-          <button type="submit" class="btn" id="add-book">Add Book</button>
-          <button type="reset" class="btn" id="reset">Reset</button>
+          <button type="submit" class="add-remove-btns" id="add-book">Add Book</button>
+          <button type="reset" class="add-remove-btns" id="reset">Reset</button>
         </div>
       </form>
     </div>

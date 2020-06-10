@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -12,11 +14,13 @@ html {
   -o-background-size: cover;
   background-size: cover;
   background-color: #919191;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lobster', sans-serif;
 }
 
 /* Header styles */
 #header-container {
+  display: flex;
+  justify-content: space-between;
   padding: 1.3rem;
   width: 100vw;
   background-color: #eee;
@@ -25,7 +29,7 @@ html {
   border-radius: 5px;
 }
 
-#header {
+#header-title {
   color: #222;
   margin: auto;
   line-height: 1.2;
@@ -34,9 +38,100 @@ html {
   font-size: 5rem;
 }
 
+.sign-in-container {
+  width: 280px;
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+}
+
+.header-btns {
+  display: flex;
+  font-size: 2rem;
+  color: #222;
+}
+
+.log-in-btns {
+  font-size: 2rem;
+  margin-right: 1rem;
+  font-weight: bold;
+  color: #222;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  outline: none;
+}
+
+/* paragraph tag for "or" */
+.lead {
+  margin-right: 1rem;
+}
+
+.log-in-btns:hover {
+  color: #c93c3c;
+}
+
+.login-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.sign-up-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Login and Sign Up Forms */
+.login-form-container,
+.sign-up-form-container {
+  display: none;
+  position: absolute;
+  height: 125px;
+  width: 175px;
+  background: #222;
+}
+
+.sign-up-form-container {
+  right: 1.7rem;
+}
+
+.login-form {
+  display: grid;
+  justify-content: center;
+}
+
+.login-form input {
+  padding: 5px;
+  margin-top: 8px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.login-submit-btn {
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #559beb;
+  transition: all 0.5s;
+}
+
+.login-submit-btn:hover {
+  background: #316fb6;
+}
+
+/* Style login & show login on click */
+.login-dropdown:hover .login-form-container {
+  display: block;
+}
+
+.sign-up-dropdown:hover .sign-up-form-container {
+  display: block;
+}
+
 /* Contains the books data and input */
 #main-container {
-  margin-top: 7rem;
+  margin-top: 12rem;
   display: grid;
 }
 
@@ -61,12 +156,14 @@ td {
   font-size: 1.5rem;
   padding: 5px 10px;
   text-align: center;
+  font-family: sans-serif;
 }
 
 #read-btn {
   width: 40px;
   height: 30px;
   font-size: inherit;
+  font-family: inherit;
   color: inherit;
   background-color: Transparent;
   background-repeat: no-repeat;
@@ -82,9 +179,10 @@ td {
   padding: 0.2rem;
   background: #c93c3c;
   color: inherit;
+  font-family: sans-serif;
   border-radius: 2px;
   cursor: pointer;
-  transition: all 0.8s;
+  transition: all 0.5s;
 }
 
 #delete-btn:hover {
@@ -140,17 +238,18 @@ td {
   display: grid;
 }
 
-.btn {
+.add-remove-btns {
   font-size: 2rem;
   margin-bottom: 2rem;
   padding: 0.6rem;
   border-radius: 5px;
+  font-family: sans-serif;
   background: #559beb;
   cursor: pointer;
-  transition: all 0.8s;
+  transition: all 0.5s;
 }
 
-.btn:hover {
+.add-remove-btns:hover {
   background: #316fb6;
 }
 
